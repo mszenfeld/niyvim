@@ -1,0 +1,41 @@
+{
+  "diagnostic.errorSign": "✖",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.messageTarget": "float",
+  
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.banditEnabled": true,
+  "python.sortImports.path": "isort",
+
+  "coc.preferences.hoverTarget": "float",
+
+  "languageserver": {
+   "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    },
+    "sourcery": {
+      "command": "/Users/mef1st0/.pyenv/shims/sourcery",
+      "args": ["lsp"],
+      "filetypes": ["python"],
+      "initializationOptions": {
+        "token": "user_kPudEnDnl352k13hDgMJZ3x9AKgG7Be_WknOMDtwMmNgsH3ueR1qPbkuous",
+        "extension_version": "coc.vim",
+        "editor_version": "vim"
+      },
+      "settings": {
+        "sourcery": {
+          "metricsEnabled": true
+        }
+      }
+    }
+  }
+}
