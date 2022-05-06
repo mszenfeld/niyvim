@@ -22,20 +22,5 @@
         "usePlaceholders": true
       }
     },
-    "sourcery": {
-      "command": "/Users/mef1st0/.pyenv/shims/sourcery",
-      "args": ["lsp"],
-      "filetypes": ["python"],
-      "initializationOptions": {
-        "token": "user_kPudEnDnl352k13hDgMJZ3x9AKgG7Be_WknOMDtwMmNgsH3ueR1qPbkuous",
-        "extension_version": "coc.vim",
-        "editor_version": "vim"
-      },
-      "settings": {
-        "sourcery": {
-          "metricsEnabled": true
-        }
-      }
-    }
   }
 }
