@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
   }
 
   -- Development
+  use 'numirias/semshi'
   use {
     'nvim-treesitter/nvim-treesitter',
     config = function()
