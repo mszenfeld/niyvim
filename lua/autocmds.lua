@@ -17,3 +17,9 @@ cmd('BufWrite', {
   pattern = '*.py',
   command = ':CocCommand python.sortImports',
 })
+
+cmd('FileType', {
+  desc = 'Colorscheme for Semshi',
+  pattern = 'python',
+  command = ':lua require("functions").nord_semshi()'
+})
