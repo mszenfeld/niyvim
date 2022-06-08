@@ -2,7 +2,7 @@ local M = {}
 
 function M.config()
   require('neoscroll').setup({
-    mappings = {'<C-u>', '<C-d>', '<C-b>', 'gg', 'G',
+    mappings = {'<C-u>', '<C-d>', '<C-b>',
                 '<C-y>', '<C-e>', 'zt', 'zz', 'zb'},
   })
 end

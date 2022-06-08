@@ -21,3 +21,9 @@ vim.g.neovide_cursor_vfx_mode = 'railgun'
 -- Emmet
 vim.g.user_emmet_leader_key = ','
 
+-- Go
+vim.g.go_def_mapping_enabled = 0
+
+-- PEP8
+vim.g.python_pep8_indent_multiline_string = -1
+vim.g.python_pep8_indent_hang_closing = 0
