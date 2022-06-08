@@ -46,6 +46,8 @@ return require('packer').startup(function(use)
   }
 
   -- Development
+  use 'fatih/vim-go'
+  use 'Vimjas/vim-python-pep8-indent'
   use 'numirias/semshi'
   use {
     'nvim-treesitter/nvim-treesitter',
