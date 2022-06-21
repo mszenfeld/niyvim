@@ -24,6 +24,7 @@ map('n', 'gd', '<Plug>(coc-definition)', { silent = true })
 map('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
 map('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
 map('n', 'gr', '<Plug>(coc-references)', { silent = true })
+map('n', 'ff', '<Plug>(coc-format-selected)', { silent = true })
 
 map('n', '<Leader>rn', '<Plug>(coc-rename)', { silent = true })
 map('n', 'K', '<Cmd>lua require("functions").show_documentation()<CR>', { noremap = true, silent = true })

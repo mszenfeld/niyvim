@@ -46,6 +46,10 @@ return require('packer').startup(function(use)
   }
 
   -- Development
+  use 'othree/html5.vim'
+  use 'evanleck/vim-svelte'
+  use 'pangloss/vim-javascript'
+  use 'HerringtonDarkholme/yats.vim'
   use 'fatih/vim-go'
   use 'Vimjas/vim-python-pep8-indent'
   use 'numirias/semshi'
