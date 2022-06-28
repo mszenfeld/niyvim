@@ -1,15 +1,21 @@
-# nvim-config
+# NiyVim
 
 It's a feature-rich neovim configuration for using it as a full-featured IDE in daily coding.
 
 ## Requirements
 
-- Neovim 0.7
+- Neovim 0.8
 - [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Features
 
-- File explorer and quick navigation 
+- File explorer and quick navigation
+- Beautiful UI
+- Terminal
+- Integration with git
+- Status bar
+- Fuzzy finding
 
 ## Installation
 
@@ -24,6 +30,3 @@ Now, you can run neovim and install required packages:
 ```sh
 nvim +PackerSync
 ```
-
-## Configuration
-
