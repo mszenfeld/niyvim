@@ -42,8 +42,8 @@ Mapping | Action
 `Ctrl` + `j` | Go to the window below
 `Ctrl` + `k` | Go to the window above
 `Ctrl` + `l` | Go to the right window
-`\` + `+` | Increase window size
-`\` + `-` | Decrease window size
+`\+` | Increase window size
+`\-` | Decrease window size
 `Ctrl` + `\` | Open terminal 
 `gcc` | Toggle the current line using linewise comment 
 `\fo` | Toggle fold
@@ -61,3 +61,11 @@ Mapping | Action
 --- | ---
 `\fi` | Find files
 `\rg` | Live grep
+
+### Git 
+
+Mapping | Action
+--- | ---
+`\hs` | Stage hunk
+`\hr` | Reset hunk
+`\hp` | Preview hunk
