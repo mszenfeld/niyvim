@@ -50,9 +50,9 @@ map('n', '<Leader>rg', '<cmd>Telescope live_grep<CR>', { noremap = true, silent 
 
 -- Tests
 
-map('n', '<Leader><F1>', ':TestNearest<CR>', { silent = true })
-map('n', '<Leader><F2>', ':TestFile<CR>', { silent = true })
-map('n', '<Leader><F3>', ':TestLast<CR>', { silent = true })
+map('n', '<Space>tn', ':TestNearest<CR>', { silent = true })
+map('n', '<Space>tf', ':TestFile<CR>', { silent = true })
+map('n', '<Space>tl', ':TestLast<CR>', { silent = true })
 
 -- Git
 
