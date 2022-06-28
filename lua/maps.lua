@@ -39,7 +39,6 @@ map('n', '<Space>h', ':call CocAction("doHover")<CR>', { noremap = true, silent 
 -- Neo-tree
 
 map('n', '<C-f>', ':Neotree action=focus<CR>', { noremap = true, silent = true })
-map('n', '<C-t>', ':Neotree action=toggle<CR>', { noremap = true, silent = true })
 map('n', '<C-p>', ':Neotree float buffers<CR>', { noremap = true, silent = true }) 
 
 
