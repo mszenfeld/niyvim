@@ -8,16 +8,16 @@ return require('packer').startup(function(use)
   -- Utils
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
+
+  -- GUI
+  use 'kyazdani42/nvim-web-devicons'
+  use 'arcticicestudio/nord-vim'
   use {
     'karb94/neoscroll.nvim',
     config = function()
       require('configs.neoscroll').config()
     end
   }
-
-  -- GUI
-  use 'kyazdani42/nvim-web-devicons'
-  use 'arcticicestudio/nord-vim'
 
   -- Navigation
   use 'nvim-telescope/telescope.nvim'
@@ -72,12 +72,13 @@ return require('packer').startup(function(use)
   
   -- Git
   use {
-  'lewis6991/gitsigns.nvim',
-  -- tag = 'release',
-  config = function()
-    require('configs.gitsigns').config()
-  end
-}
+    'lewis6991/gitsigns.nvim',
+    -- tag = 'release',
+    config = function()
+      require('configs.gitsigns').config()
+    end
+  }
+  use 'tpope/vim-fugitive'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
