@@ -41,7 +41,6 @@ map('n', '<Space>h', ':call CocAction("doHover")<CR>', { noremap = true, silent 
 map('n', '<C-f>', ':Neotree action=focus<CR>', { noremap = true, silent = true })
 map('n', '<C-p>', ':Neotree float buffers<CR>', { noremap = true, silent = true }) 
 
-
 -- Aerial
 
 map('n', '<Leader>a', ':AerialOpen<CR>', { silent = true })
