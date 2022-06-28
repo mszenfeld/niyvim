@@ -33,6 +33,8 @@ nvim +PackerSync
 
 ## Default Mappings
 
+### General
+
 Mapping | Action
 --- | ---
 `jj` | Escape key
@@ -42,3 +44,6 @@ Mapping | Action
 `Ctrl` + `l` | Go to the right window
 `\` + `+` | Increase window size
 `\` + `-` | Decrease window size
+`Ctrl` + `\` | Open terminal 
+`gcc` | Toggle the current line using linewise comment 
+`\fo` | Toggle fold

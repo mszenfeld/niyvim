@@ -8,7 +8,7 @@ vim.api.nvim_command('colorscheme nord')
 
 -- Configuration
 
-vim.g.fold_method = 0
+vim.g.fold_method = 1
 
 -- Tests
 vim.g['test#strategy'] = 'dispatch'
