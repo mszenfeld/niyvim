@@ -82,3 +82,11 @@ Mapping | Action
 `Shift` + `k` | Show documentation
 `Space` + `l` | Show diagnostics
 `Space` + `f` | Fix 
+
+### Tests
+
+Mapping | Action
+--- | ---
+`Space` + `tn` | Test nearest
+`Space` + `tf` | Test file
+`Space` + `tl` | Test last
