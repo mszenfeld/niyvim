@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local gs = package.loaded.gitsigns
 
-map('i', 'ii', '<Esc>', {})
+map('i', 'jj', '<Esc>', {})
 map('n', '<space>', 'za', { noremap = true })
 map('v', '<space>', 'zf', { noremap = true })
 map('n', '<leader>fo', '<Cmd> lua require("functions").toggle_fold()<CR>', { silent = true })
