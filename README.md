@@ -30,3 +30,15 @@ Now, you can run neovim and install required packages:
 ```sh
 nvim +PackerSync
 ```
+
+## Default Mappings
+
+Mapping | Action
+--- | ---
+`jj` | Escape key
+`Ctrl` + `h` | Go to the left window
+`Ctrl` + `j` | Go to the window below
+`Ctrl` + `k` | Go to the window above
+`Ctrl` + `l` | Go to the right window
+`\` + `+` | Increase window size
+`\` + `-` | Decrease window size
