@@ -69,3 +69,16 @@ Mapping | Action
 `\hs` | Stage hunk
 `\hr` | Reset hunk
 `\hp` | Preview hunk
+
+### LSP
+
+Mapping | Action
+--- | ---
+`gd` | Go to definition
+`gy` | Go to type definition
+`gi` | Go to implementation
+`gr` | Go to references
+`\rn` | Rename
+`Shift` + `k` | Show documentation
+`Space` + `l` | Show diagnostics
+`Space` + `f` | Fix 
