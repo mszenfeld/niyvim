@@ -22,7 +22,7 @@ It's a feature-rich neovim configuration for using it as a full-featured IDE in 
 Back up your current neovim configuration and clone this repository to the `~/.config/nvim` directory.
 
 ```sh
-git clone https://github.com/mszenfeld/nvim-config.git ~/.config/nvim
+git clone https://github.com/mszenfeld/niyvim.git ~/.config/nvim
 ```
 
 Now, you can run neovim and install required packages:
