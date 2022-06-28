@@ -48,10 +48,16 @@ Mapping | Action
 `gcc` | Toggle the current line using linewise comment 
 `\fo` | Toggle fold
 
-
 ### File explorer
 
 Mapping | Action
 --- | ---
 `Ctrl` + `f` | Open/focus file explorer
 `Ctrl` + `p` | Open floating window with active buffers
+
+### File navigation
+
+Mapping | Action
+--- | ---
+`\fi` | Find files
+`\rg` | Live grep
