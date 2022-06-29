@@ -4,6 +4,8 @@ require('maps')
 require('autocmds')
 require('settings')
 
+require('configs/lsp').setup()
+
 vim.api.nvim_command('colorscheme nord')
 
 -- Configuration
