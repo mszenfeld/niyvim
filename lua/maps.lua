@@ -18,22 +18,6 @@ map('n', '<C-l>', ':wincmd l<CR>', { silent = true })
 map('n', '<Leader>+', ':exe "vertical resize " . (winwidth(0) * 3/2)<CR>', { noremap = true, silent = true }) 
 map('n', '<Leader>-', ':exe "vertical resize " . (winwidth(0) * 2/3)<CR>', { noremap = true, silent = true }) 
 
--- CoC mappings
-
-map('n', 'gd', '<Plug>(coc-definition)', { silent = true })
-map('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
-map('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
-map('n', 'gr', '<Plug>(coc-references)', { silent = true })
-
-map('n', '<Leader>rn', '<Plug>(coc-rename)', { silent = true })
-map('n', 'K', '<Cmd>lua require("functions").show_documentation()<CR>', { noremap = true, silent = true })
-
-map('n', '<Space>l', ':<C-u>CocList diagnostics<CR>', { noremap = true, silent = true })
-map('n', '<Space>e', ':<C-u>CocList extensions<CR>', { noremap = true, silent = true })
-map('n', '<Space>c', ':<C-u>CocList commands<CR>', { noremap = true, silent = true })
-map('n', '<Space>f', ':CocFix<CR>', { noremap = true, silent = true })
-map('n', '<Space>h', ':call CocAction("doHover")<CR>', { noremap = true, silent = true })
-
 -- Neo-tree
 
 map('n', '<C-f>', ':Neotree action=focus<CR>', { noremap = true, silent = true })

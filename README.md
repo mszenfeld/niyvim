@@ -81,7 +81,7 @@ Mapping | Action
 `\rn` | Rename
 `Shift` + `k` | Show documentation
 `Space` + `l` | Show diagnostics
-`Space` + `f` | Fix 
+`Space` + `f` | Code actions 
 
 ### Tests
 

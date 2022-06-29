@@ -9,17 +9,5 @@ cmd('FileType', {
 cmd('CursorHold', {
   desc = 'Highlight the symbol and its references when holding the cursor',
   pattern = '*',
-  command = 'silent call CocActionAsync("highlight")',
-})
-
-cmd('BufWrite', {
-  desc = 'Run isort on write',
-  pattern = '*.py',
-  command = ':CocCommand python.sortImports',
-})
-
-cmd('FileType', {
-  desc = 'Colorscheme for Semshi',
-  pattern = 'python',
-  command = ':lua require("functions").nord_semshi()'
+  command = 'lua vim.diagnostic.open_float(nil, { scope = "line" })',
 })
