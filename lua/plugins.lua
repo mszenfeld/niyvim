@@ -9,10 +9,22 @@ return require('packer').startup(function(use)
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
   use {
-    "max397574/better-escape.nvim",
+    'max397574/better-escape.nvim',
     config = function()
-      require("better_escape").setup()
+      require('better_escape').setup()
     end,
+  }
+  use {
+    'glepnir/dashboard-nvim',
+    config = function()
+      require('configs.dashboard').config()
+    end
+  }
+  use {
+    'folke/which-key.nvim',
+    config = function()
+      require('which-key').setup()
+    end
   }
 
   -- GUI
