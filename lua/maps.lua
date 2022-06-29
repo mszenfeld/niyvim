@@ -7,7 +7,6 @@ map('v', '<space>', 'zf', { noremap = true })
 map('n', '<leader>fo', '<Cmd> lua require("functions").toggle_fold()<CR>', { silent = true })
 
 -- Windows switching
-
 map('n', '<C-h>', ':wincmd h<CR>', { silent = true })
 map('n', '<C-j>', ':wincmd j<CR>', { silent = true })
 map('n', '<C-k>', ':wincmd k<CR>', { silent = true })
@@ -20,7 +19,7 @@ map('n', '<Leader>-', ':exe "vertical resize " . (winwidth(0) * 2/3)<CR>', { nor
 
 -- Neo-tree
 
-map('n', '<C-f>', ':Neotree action=focus<CR>', { noremap = true, silent = true })
+map('n', '<C-f>', ':Neotree action=focus reveal=true<CR>', { noremap = true, silent = true })
 map('n', '<C-p>', ':Neotree float buffers<CR>', { noremap = true, silent = true }) 
 
 -- Aerial
@@ -43,3 +42,7 @@ map('n', '<Space>tl', ':TestLast<CR>', { silent = true })
 map('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', { silent = true })
 map('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', { silent = true })
 map('n', '<leader>hp', ':Gitsigns preview_hunk<CR>', { silent = true })
+
+-- WhichKey
+
+map('n', '<Space>?', ':WhichKey<CR>', { silent = true })

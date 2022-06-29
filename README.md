@@ -47,6 +47,7 @@ Mapping | Action
 `Ctrl` + `\` | Open terminal 
 `gcc` | Toggle the current line using linewise comment 
 `\fo` | Toggle fold
+`Space` + `?` | Show key binding: + `?` | Show key binding
 
 ### File explorer
 
