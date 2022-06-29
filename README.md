@@ -91,3 +91,10 @@ Mapping | Action
 `Space` + `tn` | Test nearest
 `Space` + `tf` | Test file
 `Space` + `tl` | Test last
+
+### Sessions
+
+Mapping | Action
+--- | ---
+`\ss` | Save Session
+`\sl` | Load Session
