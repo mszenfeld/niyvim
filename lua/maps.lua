@@ -31,6 +31,11 @@ map('n', '<Leader>a', ':AerialOpen<CR>', { silent = true })
 map('n', '<Leader>fi', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
 map('n', '<Leader>rg', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
 
+-- Sessions
+
+map('n', '<Leader>ss', ':SessionSave<CR>', { silent = true })
+map('n', '<Leader>sl', ':SessionLoad<CR>', { silent = true })
+
 -- Tests
 
 map('n', '<Space>tn', ':TestNearest<CR>', { silent = true })

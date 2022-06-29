@@ -4,6 +4,7 @@ function M.config()
   local db = require('dashboard')
   
   db.default_executive = 'telescope'
+  db.session_directory = '.session'
 
   db.custom_header = {
     '',
@@ -24,6 +25,12 @@ function M.config()
     '',
   } 
   db.custom_center = {
+    {
+      icon = '  ',
+      desc = 'Open Last Session                       ',
+      shortcut = '<leader>sl',
+      action = 'SessionLoad',
+    },
     {
       icon = '  ',
       desc = 'File Manager                            ',
