@@ -41,8 +41,3 @@ vim.o.updatetime = 300
 
 -- Don't pass messages to |ins-completion-menu|.
 vim.o.shortmess = vim.o.shortmess .. 'c'
-
--- GUI
-vim.o.termguicolors = true
-vim.o.bg = 'dark'
-vim.o.guifont = 'JetBrainsMono Nerd Font:h13'
