@@ -8,6 +8,12 @@ return require('packer').startup(function(use)
   -- Utils
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
+  use {
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup()
+    end,
+  }
 
   -- GUI
   use 'kyazdani42/nvim-web-devicons'
