@@ -2,6 +2,8 @@
 
 It's a feature-rich neovim configuration for using it as a full-featured IDE in daily coding.
 
+![niyvim01](https://user-images.githubusercontent.com/44201798/176666315-bf03acfc-631c-4a8d-a1e3-fb4567783acf.png)
+
 ## Requirements
 
 - Neovim 0.8
