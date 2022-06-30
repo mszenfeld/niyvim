@@ -45,7 +45,7 @@ function M.config()
     },
     {
       icon = '  ',
-      desc = 'Find  word                              ',
+      desc = 'Find Word                               ',
       shortcut = '<leader>rg',
       action = 'Telescope live_grep',
     },
