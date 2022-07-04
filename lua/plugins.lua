@@ -85,6 +85,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-dispatch'
   use 'vim-test/vim-test'
   use 'mattn/emmet-vim'
+  use 'github/copilot.vim'
 
   -- LSP
   use {

@@ -100,3 +100,13 @@ Mapping | Action
 --- | ---
 `\ss` | Save Session
 `\sl` | Load Session
+
+## Configuration
+
+To add your custom configuration, you can create a `config.lua` file and put it there. For instance, if you want to override default mapping for `<leader>a`, you can put target mapping in `config.lua`.
+
+```lua
+-- config.lua
+
+vim.api.nvim_set_keymap('n', '<Leader>a', ':Telescope find_files<CR>', { silent = true })
+```
