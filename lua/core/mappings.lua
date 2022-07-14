@@ -103,12 +103,19 @@ local default = {
   },
 }
 
-function M:load ()
-  for key, mapping in pairs(default) do
+local set_mappings = function(mappings)
+  for key, mapping in pairs(mappings) do 
     for _, mode in ipairs(mapping.mode) do
       vim.api.nvim_set_keymap(mode, key, mapping.action, mapping.opts)
     end
   end
+end
+
+function M.load ()
+  niyvim = require('config')
+
+  set_mappings(default)
+  set_mappings(niyvim.mappings)
 end
 
 return M
