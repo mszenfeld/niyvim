@@ -27,6 +27,11 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Debugger
+  use 'mfussenegger/nvim-dap'
+  use 'leoluz/nvim-dap-go'
+  use 'mfussenegger/nvim-dap-python'
+
   -- GUI
   use 'kyazdani42/nvim-web-devicons'
   use 'arcticicestudio/nord-vim'
@@ -83,9 +88,62 @@ return require('packer').startup(function(use)
     end
   }
   use 'tpope/vim-dispatch'
-  use 'vim-test/vim-test'
   use 'mattn/emmet-vim'
-  use 'github/copilot.vim'
+
+  -- Tests
+  use 'nvim-neotest/neotest-python'
+  use 'nvim-neotest/neotest-go'
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "antoinemadec/FixCursorHold.nvim"
+    },
+    config = function()
+      require('neotest').setup({
+        adapters = {
+          require('neotest-python')({ runner = 'pytest' }),
+          require("neotest-go"),
+        },
+        diagnostic = {
+          enabled = true,
+        },
+        summary = {
+          enabled = true,
+          follow = true,
+          expend_errors = true,
+        },
+        status = {
+          enabled = true,
+        }
+      })
+    end
+  }
+
+  -- Copilot
+  use {
+    "zbirenbaum/copilot.lua",
+    event = {"VimEnter"},
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup({
+          cmp = {
+            enabled = true,
+            method = "getPanelCompletions",
+          },
+          panel = {
+            enabled = false,
+          },
+          ft_disable = { "dap-repl", "markdown" },
+          plugin_manager_path = vim.fn.stdpath("data") .. "/site/pack/packer",
+          server_opts_overrides = {},
+  	})
+      end, 100)
+    end
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    module = "copilot_cmp",
+  }
 
   -- LSP
   use {

@@ -8,7 +8,6 @@ vim.bo.modeline = false
 vim.wo.wrap = false
 vim.g.hidden = true
 
-vim.wo.foldmethod = 'syntax'
 vim.wo.number = true
 vim.wo.signcolumn = 'yes'
 vim.o.hlsearch = true

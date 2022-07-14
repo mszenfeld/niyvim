@@ -1,17 +1,6 @@
 local map = vim.api.nvim_set_keymap
 local gs = package.loaded.gitsigns
 
-map('i', 'jj', '<Esc>', {})
-map('n', '<space>', 'za', { noremap = true })
-map('v', '<space>', 'zf', { noremap = true })
-map('n', '<leader>fo', '<Cmd> lua require("functions").toggle_fold()<CR>', { silent = true })
-
--- Windows switching
-map('n', '<C-h>', ':wincmd h<CR>', { silent = true })
-map('n', '<C-j>', ':wincmd j<CR>', { silent = true })
-map('n', '<C-k>', ':wincmd k<CR>', { silent = true })
-map('n', '<C-l>', ':wincmd l<CR>', { silent = true })
-
 -- Windows resizing
 
 map('n', '<Leader>+', ':exe "vertical resize " . (winwidth(0) * 3/2)<CR>', { noremap = true, silent = true }) 
@@ -24,7 +13,7 @@ map('n', '<C-p>', ':Neotree float buffers<CR>', { noremap = true, silent = true 
 
 -- Aerial
 
-map('n', '<Leader>a', ':AerialOpen<CR>', { silent = true })
+map('n', '<Leader>a', ':AerialToggle<CR>', { silent = true })
 
 -- Telescope
 
@@ -38,9 +27,9 @@ map('n', '<Leader>sl', ':SessionLoad<CR>', { silent = true })
 
 -- Tests
 
-map('n', '<Space>tn', ':TestNearest<CR>', { silent = true })
-map('n', '<Space>tf', ':TestFile<CR>', { silent = true })
-map('n', '<Space>tl', ':TestLast<CR>', { silent = true })
+map('n', '<Space>tn', '<cmd> lua require("neotest").run.run()<CR>', { silent = true, noremap = true })
+map('n', '<Space>tf', '<cmd> lua require("neotest").run.run(vim.fn.expand("%"))<CR>', { silent = true, noremap = true })
+map('n', '<leader>ts', '<cmd> lua require("neotest").summary.toggle()<CR>', { silent = true, noremap = true })
 
 -- Git
 
