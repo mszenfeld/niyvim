@@ -34,6 +34,73 @@ local default = {
     action = ':wincmd l<cr>',
     opts = { silent = true },
   },
+
+  -- Neo-tree
+  ['<C-f>'] = {
+    mode = { 'n' },
+    action = ':Neotree action=focus reveal=true<cr>',
+    opts = { noremap = true, silent = true },
+  },
+  ['<C-p>'] = {
+    mode = { 'n' },
+    action = ':Neotree float bufers<cr>',
+    opts = { noremap = true, silent = true },
+  },
+
+  -- Aerial
+  ['<leader>a'] = {
+    mode = { 'n' },
+    action = ':AerialToggle<cr>',
+    opts = { silent = true },
+  },
+
+  -- Telescope
+  ['<leader>fi'] = {
+    mode = { 'n' },
+    action = '<cmd>Telescope find_files<cr>',
+    opts = { noremap = true, silent = true },
+  },
+  ['<leader>rg'] = {
+    mode = { 'n' },
+    action = '<cmd>Telescope live_grep<cr>',
+    opts = { noremap = true, silent = true },
+  },
+
+  -- Sessions
+  ['<leader>ss'] = {
+    mode = { 'n' },
+    action = ':SessionSave<cr>',
+    opts = { silent = true },
+  },
+  ['<leader>sl'] = {
+    mode = { 'n' },
+    action = ':SessionLoad<cr>',
+    opts = { silent = true },
+  },
+
+  -- Tests
+  ['<space>tn'] = {
+    mode = { 'n' },
+    action = '<cmd>lua require("neotest").run.run()<cr>',
+    opts = { noremap = true, silent = true },
+  },
+  ['<space>tf'] = {
+    mode = { 'n' },
+    action = '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>',
+    opts = { noremap = true, silent = true },
+  },
+  ['<space>ts'] = {
+    mode = { 'n' },
+    action = '<cmd>lua require("neotest").summary.toggle()<cr>',
+    opts = { noremap = true, silent = true },
+  },
+
+  -- WhichKey
+  ['<space>?'] = {
+    mode = { 'n' },
+    action = ':WhichKey<cr>',
+    opts = { silent = true },
+  },
 }
 
 function M:load ()

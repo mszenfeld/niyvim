@@ -1,6 +1,5 @@
 require('plugins')
 require('functions')
-require('maps')
 require('autocmds')
 require('settings')
 
