@@ -5,28 +5,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
   
 return require('packer').startup(function(use)
-  -- Utils
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-surround'
-  use {
-    'max397574/better-escape.nvim',
-    config = function()
-      require('better_escape').setup()
-    end,
-  }
-  use {
-    'glepnir/dashboard-nvim',
-    config = function()
-      require('configs.dashboard').config()
-    end
-  }
-  use {
-    'folke/which-key.nvim',
-    config = function()
-      require('which-key').setup()
-    end
-  }
-
   -- Debugger
   use 'mfussenegger/nvim-dap'
   use 'leoluz/nvim-dap-go'
@@ -91,18 +69,21 @@ return require('packer').startup(function(use)
   use 'mattn/emmet-vim'
 
   -- Tests
-  use 'nvim-neotest/neotest-python'
-  use 'nvim-neotest/neotest-go'
   use {
     "nvim-neotest/neotest",
     requires = {
-      "antoinemadec/FixCursorHold.nvim"
+      'nvim-neotest/neotest-python',
+      'nvim-neotest/neotest-go',
+      'antoinemadec/FixCursorHold.nvim',
     },
     config = function()
       require('neotest').setup({
         adapters = {
-          require('neotest-python')({ runner = 'pytest' }),
-          require("neotest-go"),
+          require('neotest-python')({
+            dap = { justMyCode = false },
+            runner = 'pytest'
+          }),
+          require('neotest-go'),
         },
         diagnostic = {
           enabled = true,
@@ -183,6 +164,10 @@ return require('packer').startup(function(use)
     end
   }
   use 'tpope/vim-fugitive'
+
+  -- Databases
+  use { 'tpope/vim-dadbod' }
+  use { 'kristijanhusak/vim-dadbod-ui' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

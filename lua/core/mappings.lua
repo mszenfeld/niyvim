@@ -43,7 +43,7 @@ local default = {
   },
   ['<C-p>'] = {
     mode = { 'n' },
-    action = ':Neotree float bufers<cr>',
+    action = ':Neotree float buffers<cr>',
     opts = { noremap = true, silent = true },
   },
 
@@ -89,7 +89,7 @@ local default = {
     action = '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>',
     opts = { noremap = true, silent = true },
   },
-  ['<space>ts'] = {
+  ['<leader>ts'] = {
     mode = { 'n' },
     action = '<cmd>lua require("neotest").summary.toggle()<cr>',
     opts = { noremap = true, silent = true },
@@ -99,6 +99,13 @@ local default = {
   ['<space>?'] = {
     mode = { 'n' },
     action = ':WhichKey<cr>',
+    opts = { silent = true },
+  },
+
+  -- Database
+  ['<leader>db'] = {
+    mode = { 'n' },
+    action = ':DBUIToggle<cr>',
     opts = { silent = true },
   },
 }
