@@ -116,26 +116,30 @@ niyvim.mappings = {
   },
 }
 
--- DAP
 
-dap = require('dap')
+niyvim.init = function() 
+  -- DAP
 
-dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
-dap.defaults.fallback.focus_terminal = true
+  dap = require('dap')
 
-require('dap-go').setup()
+  dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
+  dap.defaults.fallback.focus_terminal = true
 
-dap_python = require('dap-python')
+  require('dap-go').setup()
 
-dap_python.test_runner = 'pytest'
-dap_python.setup('~/.pyenv/shims/python')
+  dap_python = require('dap-python')
 
--- Configuration
+  dap_python.test_runner = 'pytest'
+  dap_python.setup('~/.pyenv/shims/python')
 
-vim.g.go_def_mapping_enabled = 0
-vim.g.python_pep8_indent_multiline_string = -1
-vim.g.python_pep8_indent_hang_closing = 0
+  -- Configuration
 
-vim.g.svelte_preprocessors = {'typescript'}
+  vim.g.go_def_mapping_enabled = 0
+  vim.g.python_pep8_indent_multiline_string = -1
+  vim.g.python_pep8_indent_hang_closing = 0
+  vim.g.user_emmet_leader_key = ','
+  vim.g.neotest_python_runner = 'unittest'
+  vim.g.svelte_preprocessors = {'typescript'}
+end
 
 return niyvim
