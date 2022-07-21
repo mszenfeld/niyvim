@@ -1,18 +1,70 @@
 niyvim = require('niyvim')
 
--- DAP
+-- Custom Plugins
+niyvim.plugins = {
+  { 'leoluz/nvim-dap-go' },
+  { 'mfussenegger/nvim-dap-python' },
+  { 'othree/html5.vim'},
+  { 'evanleck/vim-svelte' },
+  { 'pangloss/vim-javascript' },
+  { 'HerringtonDarkholme/yats.vim' },
+  { 'fatih/vim-go' },
+  { 'Vimjas/vim-python-pep8-indent' },
+  { 'mattn/emmet-vim' },
+  {
+    'nvim-neotest/neotest',
+    requires = {
+      'nvim-neotest/neotest-python',
+      'nvim-neotest/neotest-go',
+      'antoinemadec/FixCursorHold.nvim',
+    },
+    config = function()
+      require('neotest').setup({
+        adapters = {
+          require('neotest-python')({
+            dap = { justMyCode = false },
+            runner = 'pytest'
+          }),
+          require('neotest-go'),
+        },
+        diagnostic = {
+          enabled = true,
+        },
+        summary = {
+          enabled = true,
+          follow = true,
+          expend_errors = true,
+        },
+        status = {
+          enabled = true,
+        }
+      })
+    end
+  },
 
-dap = require('dap')
-
-dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
-dap.defaults.fallback.focus_terminal = true
-
-require('dap-go').setup()
-
-dap_python = require('dap-python')
-
-dap_python.test_runner = 'pytest'
-dap_python.setup('~/.pyenv/shims/python')
+  -- Copilot
+  {
+    'zbirenbaum/copilot.lua',
+    event = {'VimEnter'},
+    config = function()
+      vim.defer_fn(function()
+        require('copilot').setup({
+          cmp = {
+            enabled = true,
+            method = 'getPanelCompletions',
+          },
+          panel = {
+            enabled = false,
+          },
+          ft_disable = { 'dap-repl', 'markdown' },
+          plugin_manager_path = vim.fn.stdpath('data') .. '/site/pack/packer',
+          server_opts_overrides = {},
+  	})
+      end, 100)
+    end
+  },
+  { 'zbirenbaum/copilot-cmp', module = 'copilot_cmp' },
+}
 
 -- Custom Mappings
 niyvim.mappings = {
@@ -63,6 +115,20 @@ niyvim.mappings = {
     opts = { noremap = true, silent = true },
   },
 }
+
+-- DAP
+
+dap = require('dap')
+
+dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
+dap.defaults.fallback.focus_terminal = true
+
+require('dap-go').setup()
+
+dap_python = require('dap-python')
+
+dap_python.test_runner = 'pytest'
+dap_python.setup('~/.pyenv/shims/python')
 
 -- Configuration
 

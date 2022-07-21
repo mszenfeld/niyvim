@@ -1,5 +1,6 @@
 local niyvim = {
-  mappings = {}
+  mappings = {},
+  plugins = {},
 }
 
 return niyvim
