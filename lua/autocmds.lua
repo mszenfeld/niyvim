@@ -11,3 +11,8 @@ cmd('CursorHold', {
   pattern = '*',
   command = 'lua vim.diagnostic.open_float(nil, { scope = "line" })',
 })
+
+cmd('FileType', {
+  pattern = 'dap-repl',
+  command = 'lua require("dap.ext.autocompl").attach()',
+})

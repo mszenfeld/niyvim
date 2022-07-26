@@ -40,17 +40,16 @@ nvim +PackerSync
 Mapping | Action
 --- | ---
 `jj` | Escape key
+`qq` | Close window
 `Ctrl` + `h` | Go to the left window
 `Ctrl` + `j` | Go to the window below
 `Ctrl` + `k` | Go to the window above
 `Ctrl` + `l` | Go to the right window
-`\+` | Increase window size
-`\-` | Decrease window size
 `Ctrl` + `\` | Open terminal 
 `gcc` | Toggle the current line using linewise comment 
-`\fo` | Toggle fold
 `Space` + `?` | Show key binding: + `?` | Show key binding
-`\a` | Open Aerial
+`\a` | Toggle Aerial
+`\db` | Toggle database UI
 
 ### File explorer
 
@@ -87,14 +86,6 @@ Mapping | Action
 `Space` + `l` | Show diagnostics
 `Space` + `f` | Code actions 
 
-### Tests
-
-Mapping | Action
---- | ---
-`Space` + `tn` | Test nearest
-`Space` + `tf` | Test file
-`Space` + `tl` | Test last
-
 ### Sessions
 
 Mapping | Action
@@ -104,10 +95,34 @@ Mapping | Action
 
 ## Configuration
 
-To add your custom configuration, you can create a `config.lua` file and put it there. For instance, if you want to override default mapping for `<leader>a`, you can put target mapping in `config.lua`.
+To add your custom configuration, you can put it in `lua/config.lua` file: 
 
 ```lua
 -- config.lua
 
-vim.api.nvim_set_keymap('n', '<Leader>a', ':Telescope find_files<CR>', { silent = true })
+niyvim = require('niyvim')
+
+-- Custom Plugins
+niyvim.plugins = {
+  { 'mfussenegger/nvim-dap-python' },
+}
+
+-- Custom Mappings
+niyvim.mappings = {
+  ['<leader>df'] = {
+    mode = { 'n' },
+    action = '<cmd>lua require("dap-python").test_class()<cr>',
+    opts = { noremap = true, silent = true },
+  },
+}
+
+
+niyvim.init = function() 
+  dap_python = require('dap-python')
+
+  dap_python.test_runner = 'pytest'
+  dap_python.setup('~/.pyenv/shims/python')
+end
+
+return niyvim
 ```
