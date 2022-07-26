@@ -1,4 +1,4 @@
-require('configs/lsp').setup()
+require('configs.lsp').setup()
 
 require('core.plugins').load()
 require('core.mappings').load()

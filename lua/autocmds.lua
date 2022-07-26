@@ -16,13 +16,3 @@ cmd('FileType', {
   pattern = 'dap-repl',
   command = 'lua require("dap.ext.autocompl").attach()',
 })
-
-cmd('FileType', {
-  pattern = 'go',
-  command = 'nnoremap <buffer> <Cmd> lua require("dap-go").debug_test()<CR>',
-})
-
-cmd('FileType', {
-  pattern = 'python',
-  command = 'nnoremap <buffer> <Cmd> lua require("dap-python").test_method()<CR>',
-})
