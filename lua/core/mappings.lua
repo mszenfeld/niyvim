@@ -8,7 +8,7 @@ local default = {
     opts = {},
   },
   ['qq'] = {
-    mode = { 'i', 'n' },
+    mode = { 'n' },
     action = ':q!<cr>',
     opts = { noremap = true },
   },
@@ -76,23 +76,6 @@ local default = {
     mode = { 'n' },
     action = ':SessionLoad<cr>',
     opts = { silent = true },
-  },
-
-  -- Tests
-  ['<space>tn'] = {
-    mode = { 'n' },
-    action = '<cmd>lua require("neotest").run.run()<cr>',
-    opts = { noremap = true, silent = true },
-  },
-  ['<space>tf'] = {
-    mode = { 'n' },
-    action = '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>',
-    opts = { noremap = true, silent = true },
-  },
-  ['<leader>ts'] = {
-    mode = { 'n' },
-    action = '<cmd>lua require("neotest").summary.toggle()<cr>',
-    opts = { noremap = true, silent = true },
   },
 
   -- WhichKey
