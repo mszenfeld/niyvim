@@ -3,14 +3,16 @@
 It's a feature-rich neovim configuration for using it as a full-featured IDE in daily coding.
 
 ![niyvim01](https://user-images.githubusercontent.com/44201798/176666315-bf03acfc-631c-4a8d-a1e3-fb4567783acf.png)
+![niyvim02](https://user-images.githubusercontent.com/44201798/184225596-4b82f3eb-bc8b-4457-a347-e01652d473aa.png)
 
-## Requirements
+
+## ⚙️ Requirements
 
 - Neovim 0.8
 - [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-## Features
+## ✨ Features
 
 - File explorer and quick navigation
 - Beautiful UI
@@ -19,7 +21,7 @@ It's a feature-rich neovim configuration for using it as a full-featured IDE in 
 - Status bar
 - Fuzzy finding
 
-## Installation
+## 🛠 Installation
 
 Back up your current neovim configuration and clone this repository to the `~/.config/nvim` directory.
 
@@ -33,7 +35,7 @@ Now, you can run neovim and install required packages:
 nvim +PackerSync
 ```
 
-## Default Mappings
+## ⌨️ Default Mappings
 
 ### General
 
