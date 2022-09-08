@@ -52,7 +52,6 @@ local ensure_packer = function()
 
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.vim]]
     return true
   end
   return false
@@ -70,7 +69,7 @@ function M.load ()
       use(data)
     end
 
-    -- Load cutom plugins
+    -- Load custom plugins
     for _, data in ipairs(niyvim.plugins) do
       use(data)
     end
