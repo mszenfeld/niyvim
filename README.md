@@ -32,7 +32,7 @@ git clone https://github.com/mszenfeld/niyvim.git ~/.config/nvim
 Now, you can run neovim and install required packages:
 
 ```sh
-nvim +PackerSync
+nvim
 ```
 
 ## ⌨️ Default Mappings
