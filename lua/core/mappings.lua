@@ -1,5 +1,3 @@
-local M = {}
-
 local default = {
   -- Base mappings
   ['jj'] = {
@@ -101,11 +99,7 @@ local set_mappings = function(mappings)
   end
 end
 
-function M.load ()
-  niyvim = require('config')
+niyvim = require('config')
 
-  set_mappings(default)
-  set_mappings(niyvim.mappings)
-end
-
-return M
+set_mappings(default)
+set_mappings(niyvim.mappings)
