@@ -36,7 +36,7 @@ local default = {
   -- Neo-tree
   ['<C-f>'] = {
     mode = { 'n' },
-    action = ':Neotree action=focus reveal=true<cr>',
+    action = ':Neotree position=left action=focus reveal=true<cr>',
     opts = { noremap = true, silent = true },
   },
   ['<C-p>'] = {
@@ -64,15 +64,20 @@ local default = {
     opts = { noremap = true, silent = true },
   },
 
-  -- Sessions
+  -- Dashboard & Session
   ['<leader>ss'] = {
-    mode = { 'n' },
+      mode = { 'n' },
     action = ':SessionSave<cr>',
     opts = { silent = true },
   },
   ['<leader>sl'] = {
     mode = { 'n' },
     action = ':SessionLoad<cr>',
+    opts = { silent = true },
+  },
+  ['<space>e'] = {
+    mode = { 'n' },
+    action = ':DashboardNewFile<cr>',
     opts = { silent = true },
   },
 

@@ -1,6 +1,7 @@
 local M = {}
 
 local default = {
+  { 'glepnir/dashboard-nvim', config = function() require('configs.dashboard').config() end },
   { 'nvim-lua/plenary.nvim' },
   { 'MunifTanjim/nui.nvim' },
   { 'tpope/vim-commentary' },

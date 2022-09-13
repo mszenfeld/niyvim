@@ -26,6 +26,12 @@ function M.config()
   } 
   db.custom_center = {
     {
+      icon = '  ',
+      desc = 'New File                                ',
+      shortcut = '<space>e  ',
+      action = 'DashboardNewFile',
+    },
+    {
       icon = '  ',
       desc = 'Open Last Session                       ',
       shortcut = '<leader>sl',
@@ -35,7 +41,7 @@ function M.config()
       icon = '  ',
       desc = 'File Manager                            ',
       shortcut = '<c-f>     ',
-      action = 'Neotree action=focus'
+      action = 'Neotree float'
     },
     {
       icon = '  ',
