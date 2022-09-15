@@ -24,7 +24,8 @@ local default = {
     requires = {
       -- LSP Support
       {'neovim/nvim-lspconfig'},
-      {'williamboman/nvim-lsp-installer'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
@@ -44,6 +45,7 @@ local default = {
   { 'tpope/vim-fugitive' },
   { 'tpope/vim-dadbod' },
   { 'kristijanhusak/vim-dadbod-ui' },
+  { 'onsails/lspkind.nvim' },
 }
 
 local ensure_packer = function()
